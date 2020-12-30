@@ -5,7 +5,7 @@
 
 ## Overview
 
-These .NET packages provide integration from the [`LaunchDarkly.Logging`](https://github.com/launchdarkly/dotnet-logging) API that is used by LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the third-party logging frameworks [`Common.Logging`](https://github.com/net-commons/common-logging) and [`log4net`](https://github.com/net-commons/common-logging).
+These .NET packages provide integration from the [`LaunchDarkly.Logging`](https://github.com/launchdarkly/dotnet-logging) API that is used by the LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the third-party logging frameworks [`Common.Logging`](https://github.com/net-commons/common-logging) and [`log4net`](https://github.com/net-commons/common-logging).
 
 LaunchDarkly tools can run on a variety of .NET platforms, including .NET Core, .NET Framework, and Xamarin. There is no single logging framework that is consistently favored across all of those. For instance, the standard in .NET Core is now `Microsoft.Extensions.Logging`, but in .NET Framework 4.5.x this is not available without bringing in .NET Core assemblies that are normally not used in .NET Framework.
 
