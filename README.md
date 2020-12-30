@@ -19,9 +19,8 @@ Like `LaunchDarkly.Logging`, `Common.Logging` is a facade that can delegate to v
 
 `LaunchDarkly.Logging` already has adapters of its own for some of the same destinations that `Common.Logging` can delegate to. For instance, to send log output from LaunchDarkly components to the console, or to a file, or to the .NET Core `Microsoft.Extensions.Logging` API, you do not need to use `Common.Logging`; you can simply use the methods in `LaunchDarkly.Logging.Logs`. This adapter is only useful in two situations:
 
-1. You have an application that is already using `Common.Logging` (such as an application that was built with an older version of the LaunchDarkly .NET SDK or Xamarin SDK, which previously always logged to `Common.Logging`).
-
-2. You want to use some destination that `Common.Logging` already integrates with and `LaunchDarkly.Logging` currently does not.
+* You have an application that is already using `Common.Logging` (such as an application that was built with an older version of the LaunchDarkly .NET SDK or Xamarin SDK, which previously always logged to `Common.Logging`).
+* Or, you want to use some destination that `Common.Logging` already integrates with and `LaunchDarkly.Logging` currently does not.
 
 To use the adapter:
 
