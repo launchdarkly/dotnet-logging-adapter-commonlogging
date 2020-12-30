@@ -1,0 +1,57 @@
+version: 2.1
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-netcore
+      - test-windows-netframework-4-5-2
+
+orbs:
+  win: circleci/windows@1.0.0
+
+jobs:
+  test-netcore:
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:2.1-focal
+    environment:
+      ASPNETCORE_SUPPRESSSTATUSMESSAGES: true
+    steps:
+      - checkout
+      - run:
+          name: install project dependencies
+          command: dotnet restore
+      - run:
+          name: build CommonLogging
+          command: dotnet build src/LaunchDarkly.Logging.CommonLogging -f netstandard20
+      - run:
+          name: build Log4net
+          command: dotnet build src/LaunchDarkly.Logging.Log4net -f netstandard20
+      - run:
+          name: run CommonLogging tests
+          command: dotnet test test/LaunchDarkly.Logging.CommonLogging.Tests -f netcoreapp2.1
+      - run:
+          name: run Log4net tests
+          command: dotnet test test/LaunchDarkly.Logging.Log4net.Tests -f netcoreapp2.1
+
+  test-windows-netframework-4-5-2:
+    executor:
+      name: win/vs2019
+      shell: powershell.exe
+    steps:
+      - checkout
+      - run:
+          name: install project dependencies
+          command: dotnet restore
+      - run:
+          name: build CommonLogging
+          command: dotnet build src/LaunchDarkly.Logging.CommonLogging -f net452
+      - run:
+          name: build Log4net
+          command: dotnet build src/LaunchDarkly.Logging.Log4net -f net452
+      - run:
+          name: run CommonLogging tests
+          command: dotnet test test/LaunchDarkly.Logging.CommonLogging.Tests -f net452
+      - run:
+          name: run Log4net tests
+          command: dotnet test test/LaunchDarkly.Logging.Log4net.Tests -f net452

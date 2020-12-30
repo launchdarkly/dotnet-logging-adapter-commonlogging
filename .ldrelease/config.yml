@@ -1,0 +1,20 @@
+
+publications:
+  - url: https://nuget.org/packages/LaunchDarkly.Logging.CommonLogging
+    description: NuGet - Common.Logging
+  - url: https://nuget.org/packages/LaunchDarkly.Logging.Log4net
+    description: NuGet - Log4net
+
+circleci:
+  windows:
+    context: org-global
+
+template:
+  name: dotnet-windows
+  env:
+    LD_RELEASE_TEST_TARGET_FRAMEWORK: net452
+    LD_RELEASE_DOCS_TARGET_FRAMEWORK: net452
+
+documentation:
+  title: LaunchDarkly Logging Adapters
+  githubPages: true

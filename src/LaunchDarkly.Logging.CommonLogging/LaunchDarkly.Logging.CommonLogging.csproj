@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-alpha.1</Version>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <DebugType>portable</DebugType>
+    <AssemblyName>LaunchDarkly.Logging.CommonLogging</AssemblyName>
+    <OutputType>Library</OutputType>
+    <PackageId>LaunchDarkly.Logging.CommonLogging</PackageId>
+    <Description>LaunchDarkly logging adapter for Common.Logging</Description>
+    <Copyright>Copyright 2020 LaunchDarkly</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LaunchDarkly.Logging" Version="1.0.0-alpha.3" />
+    <PackageReference Include="Common.Logging" Version="3.4.1" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <AssemblyOriginatorKeyFile>../../LaunchDarkly.Logging.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\LaunchDarkly.Logging.CommonLogging.xml</DocumentationFile>
+  </PropertyGroup>
+</Project>
