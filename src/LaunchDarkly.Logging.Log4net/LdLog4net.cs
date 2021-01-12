@@ -1,4 +1,5 @@
-﻿
+﻿using System.Reflection;
+
 namespace LaunchDarkly.Logging
 {
     /// <summary>
@@ -54,7 +55,7 @@ namespace LaunchDarkly.Logging
 
         internal Log4netChannel(string name)
         {
-            _log = log4net.LogManager.GetLogger(name);
+            _log = log4net.LogManager.GetLogger(Assembly.GetCallingAssembly(), name);
         }
 
         public bool IsEnabled(LogLevel level)

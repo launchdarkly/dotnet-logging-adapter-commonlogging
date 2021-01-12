@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="LaunchDarkly.Logging" Version="1.0.0-alpha.4" />
-    <PackageReference Include="Common.Logging" Version="3.4.1" />
+    <PackageReference Include="Common.Logging" Version="3.4.0" />
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

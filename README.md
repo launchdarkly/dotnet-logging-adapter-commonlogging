@@ -5,7 +5,7 @@
 
 ## Overview
 
-These .NET packages provide integration from the [`LaunchDarkly.Logging`](https://github.com/launchdarkly/dotnet-logging) API that is used by the LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the third-party logging frameworks [`Common.Logging`](https://github.com/net-commons/common-logging), [`log4net`](https://github.com/net-commons/common-logging), and [`NLog`](https://nlog-project.org/).
+These .NET packages provide integration from the [`LaunchDarkly.Logging`](https://github.com/launchdarkly/dotnet-logging) API that is used by the LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the third-party logging frameworks [`Common.Logging`](https://github.com/net-commons/common-logging), [`log4net`](https://logging.apache.org/log4net/), and [`NLog`](https://nlog-project.org/).
 
 LaunchDarkly tools can run on a variety of .NET platforms, including .NET Core, .NET Framework, and Xamarin. There is no single logging framework that is consistently favored across all of those. For instance, the standard in .NET Core is now `Microsoft.Extensions.Logging`, but in .NET Framework 4.5.x this is not available without bringing in .NET Core assemblies that are normally not used in .NET Framework.
 
@@ -15,7 +15,9 @@ The adapters in this repository are published as separate packages, to avoid unw
 
 ## Usage: `Common.Logging`
 
-Like `LaunchDarkly.Logging`, `Common.Logging` is a facade that can delegate to various adapters, sending the output either to some specific logging framework, or to a simple destination such as the console. Therefore, the LaunchDarkly adapter for `Common.Logging` is a facade for a facade.
+Like `LaunchDarkly.Logging`, [`Common.Logging`](https://github.com/net-commons/common-logging) is a facade that can delegate to various adapters, sending the output either to some specific logging framework, or to a simple destination such as the console. Therefore, the LaunchDarkly adapter for `Common.Logging` is a facade for a facade.
+
+The `LaunchDarkly.Logging.CommonLogging` package provides integration with `Common.Logging` version 3.4.0 and higher. You should add an explicit dependency on the [`Common.Logging` package](https://www.nuget.org/packages/Common.Logging) to your application to ensure that you are using the most recent version.
 
 `LaunchDarkly.Logging` already has adapters of its own for some of the same destinations that `Common.Logging` can delegate to. For instance, to send log output from LaunchDarkly components to the console, or to a file, or to the .NET Core `Microsoft.Extensions.Logging` API, you do not need to use `Common.Logging`; you can simply use the methods in `LaunchDarkly.Logging.Logs`. This adapter is only useful in two situations:
 
@@ -42,6 +44,8 @@ To use the adapter:
 
 ## Usage: `log4net`
 
+The `LaunchDarkly.Logging.Log4net` package provides integration with [`log4net`](https://logging.apache.org/log4net/) version 2.0.6 and higher. You should add an explicit dependency on the [`log4net` package](https://www.nuget.org/packages/log4net) to your application to ensure that you are using the most recent version.
+
 `log4net` has a rich configuration system that allows log behavior to be controlled in many ways. The LaunchDarkly adapter does not define any specific logging behavior itself, so the actual behavior will be determined by how you have configured `log4net`.
 
 To use the adapter:
@@ -61,6 +65,8 @@ To use the adapter:
 ```
 
 ## Usage: `NLog`
+
+The `LaunchDarkly.Logging.NLog` package provides integration with [`NLog`](https://nlog-project.org/) version 4.5 and higher. You should add an explicit dependency on the [`NLog` package](https://www.nuget.org/packages/NLog) to your application to ensure that you are using the most recent version.
 
 `NLog` has a rich configuration system that allows log behavior to be controlled in many ways. The LaunchDarkly adapter does not define any specific logging behavior itself, so the actual behavior will be determined by how you have configured `NLog`.
 
