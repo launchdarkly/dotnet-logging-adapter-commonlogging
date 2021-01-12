@@ -23,7 +23,10 @@ jobs:
           command: dotnet restore
       - run:
           name: build all projects
-          command: dotnet build
+          command: |
+            dotnet build src/LaunchDarkly.Logging.CommonLogging -f netstandard2.0
+            dotnet build src/LaunchDarkly.Logging.Log4net -f netstandard2.0
+            dotnet build src/LaunchDarkly.Logging.NLog -f netstandard2.0
       - run:
           name: run CommonLogging tests
           command: dotnet test test/LaunchDarkly.Logging.CommonLogging.Tests -f netcoreapp2.1
