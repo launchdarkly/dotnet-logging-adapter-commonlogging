@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LaunchDarkly.Logging" Version="1.0.0-alpha.3" />
+    <PackageReference Include="LaunchDarkly.Logging" Version="1.0.0-alpha.4" />
     <PackageReference Include="Common.Logging" Version="3.4.1" />
   </ItemGroup>
 

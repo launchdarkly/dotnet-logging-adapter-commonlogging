@@ -27,15 +27,13 @@ dotnet restore
 To build all targets of the project without running any tests:
 
 ```
-dotnet build src/LaunchDarkly.Logging.CommonLogging
-dotnet build src/LaunchDarkly.Logging.Log4net
+dotnet build
 ```
 
 Or, to build only the .NET Standard 2.0 target:
 
 ```
-dotnet build src/LaunchDarkly.Logging.CommonLogging -f netstandard2.0
-dotnet build src/LaunchDarkly.Logging.Log4net -f netstandard2.0
+dotnet build -f netstandard2.0
 ```
  
 ### Testing
@@ -43,13 +41,11 @@ dotnet build src/LaunchDarkly.Logging.Log4net -f netstandard2.0
 To run all unit tests, for all targets:
 
 ```
-dotnet test test/LaunchDarkly.Logging.CommonLogging.Tests
-dotnet test test/LaunchDarkly.Logging.Log4net.Tests
+dotnet test
 ```
 
 Or, to run tests only for the .NET Standard 2.0 target (using the .NET Core 2.1 runtime):
 
 ```
-dotnet test test/LaunchDarkly.Logging.CommonLogging.Tests -f netcoreapp2.1
-dotnet test test/LaunchDarkly.Logging.Log4net.Tests -f netcoreapp2.1
+dotnet test -f netcoreapp2.1
 ```

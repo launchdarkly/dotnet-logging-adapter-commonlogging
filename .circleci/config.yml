@@ -22,17 +22,17 @@ jobs:
           name: install project dependencies
           command: dotnet restore
       - run:
-          name: build CommonLogging
-          command: dotnet build src/LaunchDarkly.Logging.CommonLogging -f netstandard2.0
-      - run:
-          name: build Log4net
-          command: dotnet build src/LaunchDarkly.Logging.Log4net -f netstandard2.0
+          name: build all projects
+          command: dotnet build
       - run:
           name: run CommonLogging tests
           command: dotnet test test/LaunchDarkly.Logging.CommonLogging.Tests -f netcoreapp2.1
       - run:
           name: run Log4net tests
           command: dotnet test test/LaunchDarkly.Logging.Log4net.Tests -f netcoreapp2.1
+      - run:
+          name: run NLog tests
+          command: dotnet test test/LaunchDarkly.Logging.NLog.Tests -f netcoreapp2.1
 
   test-windows-netframework-4-5-2:
     executor:
@@ -44,14 +44,14 @@ jobs:
           name: install project dependencies
           command: dotnet restore
       - run:
-          name: build CommonLogging
-          command: dotnet build src/LaunchDarkly.Logging.CommonLogging -f net452
-      - run:
-          name: build Log4net
-          command: dotnet build src/LaunchDarkly.Logging.Log4net -f net452
+          name: build all projects
+          command: dotnet build
       - run:
           name: run CommonLogging tests
           command: dotnet test test/LaunchDarkly.Logging.CommonLogging.Tests -f net452
       - run:
           name: run Log4net tests
           command: dotnet test test/LaunchDarkly.Logging.Log4net.Tests -f net452
+      - run:
+          name: run NLog tests
+          command: dotnet test test/LaunchDarkly.Logging.NLog.Tests -f net452
