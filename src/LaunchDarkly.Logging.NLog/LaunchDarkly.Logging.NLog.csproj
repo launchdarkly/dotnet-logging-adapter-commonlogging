@@ -5,9 +5,13 @@
     <DebugType>portable</DebugType>
     <AssemblyName>LaunchDarkly.Logging.NLog</AssemblyName>
     <OutputType>Library</OutputType>
+    <LangVersion>7.3</LangVersion>
     <PackageId>LaunchDarkly.Logging.NLog</PackageId>
     <Description>LaunchDarkly logging adapter for NLog</Description>
     <Copyright>Copyright 2020 LaunchDarkly</Copyright>
+    <Company>LaunchDarkly</Company>
+    <Authors>LaunchDarkly</Authors>
+    <Owners>LaunchDarkly</Owners>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>

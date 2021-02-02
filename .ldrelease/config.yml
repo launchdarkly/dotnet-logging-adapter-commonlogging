@@ -4,6 +4,8 @@ publications:
     description: NuGet - Common.Logging
   - url: https://nuget.org/packages/LaunchDarkly.Logging.Log4net
     description: NuGet - Log4net
+  - url: https://nuget.org/packages/LaunchDarkly.Logging.NLog
+    description: NuGet - NLog
 
 circleci:
   windows:

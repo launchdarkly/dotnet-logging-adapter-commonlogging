@@ -1,6 +1,9 @@
 # LaunchDarkly Logging API for .NET - Third-Party Logging Framework Adapters
 
-[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters/tree/master.svg?style=svg)](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters/tree/master)
+[![NuGet (for Common.Logging)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.CommonLogging.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.CommonLogging/)
+[![NuGet (for Log4net)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.Log4net.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.Log4net/)
+[![NuGet (for NLog)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.NLog.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.NLog/)
+[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters.svg?style=shield)](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters)
 [![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=reference&color=00add8)](https://launchdarkly.github.io/dotnet-logging-adapters)
 
 ## Overview
@@ -101,7 +104,7 @@ See [Contributing](https://github.com/launchdarkly/dotnet-logging-adapters/blob/
 
 ## Signing
 
-The published versions of these assemblies are digitally signed with Authenticode, and also strong-named. The public key file is in this repo at `LaunchDarkly.Logging.pk` as well as here:
+The published versions of these assemblies are digitally signed with Authenticode and [strong-named](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/strong-named-assemblies). Building the code locally in the default Debug configuration does not use strong-naming and does not require a key file. The public key file is in this repo at `LaunchDarkly.Logging.pk` as well as here:
 
 ```
 Public Key:
@@ -113,8 +116,6 @@ a8a17f69f1bef56e253fc9166096c907514ab74b812d041faa04712e2bcb243d
 
 Public Key Token: d9182e4b0afd33e7
 ```
-
-Building the code locally in the default Debug configuration does not sign the assembly and does not require a key file. Note that the unit tests can only be run in the Debug configuration.
 
 ## About LaunchDarkly
  
