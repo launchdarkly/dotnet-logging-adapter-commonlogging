@@ -1,6 +1,9 @@
 # LaunchDarkly Logging API for .NET - Third-Party Logging Framework Adapters
 
-[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters/tree/master.svg?style=svg)](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters/tree/master)
+[![NuGet (for Common.Logging)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.CommonLogging.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.CommonLogging/)
+[![NuGet (for Log4net)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.Log4net.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.Log4net/)
+[![NuGet (for NLog)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.NLog.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.NLog/)
+[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters.svg?style=shield)](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters)
 [![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=reference&color=00add8)](https://launchdarkly.github.io/dotnet-logging-adapters)
 
 ## Overview
