@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Adapter property">
+    <HelpKINode Title="LdCommonLogging.Adapter Property " Url="html/P_LaunchDarkly_Logging_LdCommonLogging_Adapter.htm" />
+    <HelpKINode Title="LdLog4net.Adapter Property " Url="html/P_LaunchDarkly_Logging_LdLog4net_Adapter.htm" />
+    <HelpKINode Title="LdNLog.Adapter Property " Url="html/P_LaunchDarkly_Logging_LdNLog_Adapter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LaunchDarkly.Logging namespace" Url="html/N_LaunchDarkly_Logging.htm" />
+  <HelpKINode Title="LaunchDarkly.Logging.LdCommonLogging class" Url="html/T_LaunchDarkly_Logging_LdCommonLogging.htm" />
+  <HelpKINode Title="LaunchDarkly.Logging.LdLog4net class" Url="html/T_LaunchDarkly_Logging_LdLog4net.htm" />
+  <HelpKINode Title="LaunchDarkly.Logging.LdNLog class" Url="html/T_LaunchDarkly_Logging_LdNLog.htm" />
+  <HelpKINode Title="LdCommonLogging class">
+    <HelpKINode Title="LdCommonLogging Class" Url="html/T_LaunchDarkly_Logging_LdCommonLogging.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_LaunchDarkly_Logging_LdCommonLogging.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LdCommonLogging.Adapter property" Url="html/P_LaunchDarkly_Logging_LdCommonLogging_Adapter.htm" />
+  <HelpKINode Title="LdLog4net class">
+    <HelpKINode Title="LdLog4net Class" Url="html/T_LaunchDarkly_Logging_LdLog4net.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_LaunchDarkly_Logging_LdLog4net.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LdLog4net.Adapter property" Url="html/P_LaunchDarkly_Logging_LdLog4net_Adapter.htm" />
+  <HelpKINode Title="LdNLog class">
+    <HelpKINode Title="LdNLog Class" Url="html/T_LaunchDarkly_Logging_LdNLog.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_LaunchDarkly_Logging_LdNLog.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LdNLog.Adapter property" Url="html/P_LaunchDarkly_Logging_LdNLog_Adapter.htm" />
+</HelpKI>
