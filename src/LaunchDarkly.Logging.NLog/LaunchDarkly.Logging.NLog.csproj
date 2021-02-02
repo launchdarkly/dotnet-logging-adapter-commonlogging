@@ -3,10 +3,10 @@
     <Version>1.0.0-alpha.1</Version>
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <DebugType>portable</DebugType>
-    <AssemblyName>LaunchDarkly.Logging.CommonLogging</AssemblyName>
+    <AssemblyName>LaunchDarkly.Logging.NLog</AssemblyName>
     <OutputType>Library</OutputType>
-    <PackageId>LaunchDarkly.Logging.CommonLogging</PackageId>
-    <Description>LaunchDarkly logging adapter for Common.Logging</Description>
+    <PackageId>LaunchDarkly.Logging.NLog</PackageId>
+    <Description>LaunchDarkly logging adapter for NLog</Description>
     <Copyright>Copyright 2020 LaunchDarkly</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="LaunchDarkly.Logging" Version="1.0.0" />
-    <PackageReference Include="Common.Logging" Version="3.4.0" />
+    <PackageReference Include="NLog" Version="4.5.0" />
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -25,6 +25,6 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\LaunchDarkly.Logging.CommonLogging.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\LaunchDarkly.Logging.NLog.xml</DocumentationFile>
   </PropertyGroup>
 </Project>

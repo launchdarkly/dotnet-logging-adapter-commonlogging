@@ -1,30 +1,29 @@
-﻿using System.Reflection;
-
+﻿
 namespace LaunchDarkly.Logging
 {
     /// <summary>
     /// Provides integration between the LaunchDarkly SDK's logging framework and
-    /// the <c>log4net</c> framework.
+    /// the <c>NLog</c> framework.
     /// </summary>
-    public static class LdLog4net
+    public static class LdNLog
     {
         /// <summary>
         /// Returns an adapter for directing <c>LaunchDarkly.Logging</c> output to
-        /// <c>log4net</c>.
+        /// <c>NLog</c>.
         /// </summary>
         /// <remarks>
         /// <para>
         /// Using this adapter will cause <c>LaunchDarkly.Logging</c> to delegate each
         /// logger it creates to a corresponding logger created with
-        /// <c>log4net.LogManager.GetLogger</c>. What happens to the log output then is
-        /// entirely determined by the <c>log4net</c> configuration; there are no
+        /// <c>NLog.LogManager.GetLogger</c>. What happens to the log output then is
+        /// entirely determined by the <c>NLog</c> configuration; there are no
         /// configuration methods on the <c>Adapter</c> itself. The logger names that are
         /// used within the <c>LaunchDarkly.Logging</c> framework are passed along as
-        /// logger names to <c>log4net</c>, so they can be used in filtering rules, etc.
+        /// logger names to <c>NLog</c>, so they can be used in filtering rules, etc.
         /// </para>
         /// <para>
         /// The example code below shows how to configure the LaunchDarkly SDK to
-        /// use <c>log4net</c>.
+        /// use <c>NLog</c>.
         /// </para>
         /// </remarks>
         /// <example>
@@ -33,29 +32,29 @@ namespace LaunchDarkly.Logging
         ///     using LaunchDarkly.Sdk.Server;
         ///
         ///     var config = Configuration.Builder("my-sdk-key")
-        ///         .Logging(LdLog4net.Adapter)
+        ///         .Logging(LdNLog.Adapter)
         ///         .Build();
         ///     var client = new LdClient(config);
         /// </code>
         /// </example>
-        /// <returns>an <c>ILogAdapter</c> that delegates to <c>log4net</c></returns>
-        public static ILogAdapter Adapter => Log4netAdapter.Instance;
+        /// <returns>an <c>ILogAdapter</c> that delegates to <c>NLog</c></returns>
+        public static ILogAdapter Adapter => NLogAdapter.Instance;
     }
 
-    internal sealed class Log4netAdapter : ILogAdapter
+    internal sealed class NLogAdapter : ILogAdapter
     {
-        internal static readonly Log4netAdapter Instance = new Log4netAdapter();
+        internal static readonly NLogAdapter Instance = new NLogAdapter();
 
-        public IChannel NewChannel(string name) => new Log4netChannel(name);
+        public IChannel NewChannel(string name) => new NLogChannel(name);
     }
 
-    internal sealed class Log4netChannel : IChannel
+    internal sealed class NLogChannel : IChannel
     {
-        private readonly log4net.ILog _log;
+        private readonly NLog.Logger _log;
 
-        internal Log4netChannel(string name)
+        internal NLogChannel(string name)
         {
-            _log = log4net.LogManager.GetLogger(Assembly.GetCallingAssembly(), name);
+            _log = NLog.LogManager.GetLogger(name);
         }
 
         public bool IsEnabled(LogLevel level)
@@ -99,16 +98,16 @@ namespace LaunchDarkly.Logging
             switch (level)
             {
                 case LogLevel.Debug:
-                    _log.DebugFormat(format, param);
+                    _log.Debug(format, param);
                     break;
                 case LogLevel.Info:
-                    _log.InfoFormat(format, param);
+                    _log.Info(format, param);
                     break;
                 case LogLevel.Warn:
-                    _log.WarnFormat(format, param);
+                    _log.Warn(format, param);
                     break;
                 case LogLevel.Error:
-                    _log.ErrorFormat(format, param);
+                    _log.Error(format, param);
                     break;
             }
         }
@@ -118,16 +117,16 @@ namespace LaunchDarkly.Logging
             switch (level)
             {
                 case LogLevel.Debug:
-                    _log.DebugFormat(format, param1, param2);
+                    _log.Debug(format, param1, param2);
                     break;
                 case LogLevel.Info:
-                    _log.InfoFormat(format, param1, param2);
+                    _log.Info(format, param1, param2);
                     break;
                 case LogLevel.Warn:
-                    _log.WarnFormat(format, param1, param2);
+                    _log.Warn(format, param1, param2);
                     break;
                 case LogLevel.Error:
-                    _log.ErrorFormat(format, param1, param2);
+                    _log.Error(format, param1, param2);
                     break;
             }
         }
@@ -137,16 +136,16 @@ namespace LaunchDarkly.Logging
             switch (level)
             {
                 case LogLevel.Debug:
-                    _log.DebugFormat(format, allParams);
+                    _log.Debug(format, allParams);
                     break;
                 case LogLevel.Info:
-                    _log.InfoFormat(format, allParams);
+                    _log.Info(format, allParams);
                     break;
                 case LogLevel.Warn:
-                    _log.WarnFormat(format, allParams);
+                    _log.Warn(format, allParams);
                     break;
                 case LogLevel.Error:
-                    _log.ErrorFormat(format, allParams);
+                    _log.Error(format, allParams);
                     break;
             }
         }
