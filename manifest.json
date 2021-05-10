@@ -1,0 +1,140 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/circleci/AppData/Local/Temp/project-releaser-temp/build-docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "build/api/LaunchDarkly.Logging.LdCommonLogging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LaunchDarkly.Logging.LdCommonLogging.html",
+          "hash": "aOri266IbaJQwVlzbk7rputgr81CAuquV/AzTcID2cM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "build/api/LaunchDarkly.Logging.LdLog4net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LaunchDarkly.Logging.LdLog4net.html",
+          "hash": "sC1lmtjdiA1dty9533cc3nH2rh3YUpVRurQ/hkfGaBU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "build/api/LaunchDarkly.Logging.LdNLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LaunchDarkly.Logging.LdNLog.html",
+          "hash": "57/pFaHI4zX1PNqMlQN2ygR5pX57IJ0ozSYIDHbNi4Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "build/api/LaunchDarkly.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LaunchDarkly.Logging.html",
+          "hash": "VcXh8nwOmFpyFuDjKCaGf9FSdv/4bYImWRXGPVTm2BU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "build/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "OEMr9jEYKx4KQ54JJ79JNIVJtfFGKdzOGKEmPXN5Lt0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "I3V1Nbv7NA4an42ZMjvmNxZtLLlIz7yE+6noM9P8Tbc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "yBB+5DqR4LOHc/uuQ3ynvr9DUitIZ3emhXZFbwQxEb4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
