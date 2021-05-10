@@ -1,9 +1,5 @@
 These .NET packages provide integration from the [`LaunchDarkly.Logging`](https://launchdarkly.github.io/dotnet-logging) API that is used by the LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the third-party logging frameworks [`Common.Logging`](https://github.com/net-commons/common-logging), [`log4net`](https://logging.apache.org/log4net/), and [`NLog`](https://nlog-project.org/).
 
-* [**`Common.Logging`**](https://github.com/net-commons/common-logging)
-* [**`log4net`**](https://logging.apache.org/log4net/)
-* [**`NLog`**](https://nlog-project.org/).
-
 The adapters in this repository are published as separate NuGet packages, to avoid unwanted dependencies on `Common.Logging`, `log4net`, or `NLog` in the LaunchDarkly SDKs and in applications that do not use those frameworks.
 
 ## Using **Common.Logging**
