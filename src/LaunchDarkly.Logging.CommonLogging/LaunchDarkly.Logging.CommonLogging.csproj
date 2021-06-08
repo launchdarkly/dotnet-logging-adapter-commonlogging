@@ -1,7 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Version>1.0.1</Version>
-    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <!--
+      The reason there's a mechanism here for overriding the target frameworks with
+      an environment variable is that we want to be able to run CI tests using older
+      SDKs which do not consider "net5.0" to be a valid target framework that can be
+      referenced in a project file.
+    -->
+    <BuildFrameworks Condition="'$(BUILDFRAMEWORKS)' == ''">netstandard2.0;net452</BuildFrameworks>
+    <TargetFrameworks>$(BUILDFRAMEWORKS)</TargetFrameworks>
+
     <DebugType>portable</DebugType>
     <AssemblyName>LaunchDarkly.Logging.CommonLogging</AssemblyName>
     <OutputType>Library</OutputType>
