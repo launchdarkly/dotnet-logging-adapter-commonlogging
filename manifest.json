@@ -17,35 +17,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "build/api/LaunchDarkly.Logging.LdLog4net.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/LaunchDarkly.Logging.LdLog4net.html",
-          "hash": "sC1lmtjdiA1dty9533cc3nH2rh3YUpVRurQ/hkfGaBU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "build/api/LaunchDarkly.Logging.LdNLog.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/LaunchDarkly.Logging.LdNLog.html",
-          "hash": "57/pFaHI4zX1PNqMlQN2ygR5pX57IJ0ozSYIDHbNi4Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "build/api/LaunchDarkly.Logging.yml",
       "output": {
         ".html": {
           "relative_path": "api/LaunchDarkly.Logging.html",
-          "hash": "VcXh8nwOmFpyFuDjKCaGf9FSdv/4bYImWRXGPVTm2BU="
+          "hash": "4m8w/To+BXYRAuJazrfpNE3FdBTZUkpjf+A5xMG2cG0="
         }
       },
       "is_incremental": false,
@@ -57,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OEMr9jEYKx4KQ54JJ79JNIVJtfFGKdzOGKEmPXN5Lt0="
+          "hash": "cr9cx2JF+dna7ehtudjHlnOqnZH3ENgR1RsOKLMQsQk="
         }
       },
       "is_incremental": false,
@@ -69,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "U3c4oKkdPCO5y8MzHWgIavPfBGWYQDSCxloj5DVZMjU="
+          "hash": "DW3DlGOza6GlI2poYW1umGD5j1/SpDbzn/zf3nV0v4c="
         }
       },
       "is_incremental": false,
@@ -108,7 +84,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 3,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

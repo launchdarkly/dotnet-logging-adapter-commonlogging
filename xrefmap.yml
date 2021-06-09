@@ -25,39 +25,3 @@ references:
   commentId: Overload:LaunchDarkly.Logging.LdCommonLogging.Adapter
   fullName: LaunchDarkly.Logging.LdCommonLogging.Adapter
   nameWithType: LdCommonLogging.Adapter
-- uid: LaunchDarkly.Logging.LdLog4net
-  name: LdLog4net
-  href: api/LaunchDarkly.Logging.LdLog4net.html
-  commentId: T:LaunchDarkly.Logging.LdLog4net
-  fullName: LaunchDarkly.Logging.LdLog4net
-  nameWithType: LdLog4net
-- uid: LaunchDarkly.Logging.LdLog4net.Adapter
-  name: Adapter
-  href: api/LaunchDarkly.Logging.LdLog4net.html#LaunchDarkly_Logging_LdLog4net_Adapter
-  commentId: P:LaunchDarkly.Logging.LdLog4net.Adapter
-  fullName: LaunchDarkly.Logging.LdLog4net.Adapter
-  nameWithType: LdLog4net.Adapter
-- uid: LaunchDarkly.Logging.LdLog4net.Adapter*
-  name: Adapter
-  href: api/LaunchDarkly.Logging.LdLog4net.html#LaunchDarkly_Logging_LdLog4net_Adapter_
-  commentId: Overload:LaunchDarkly.Logging.LdLog4net.Adapter
-  fullName: LaunchDarkly.Logging.LdLog4net.Adapter
-  nameWithType: LdLog4net.Adapter
-- uid: LaunchDarkly.Logging.LdNLog
-  name: LdNLog
-  href: api/LaunchDarkly.Logging.LdNLog.html
-  commentId: T:LaunchDarkly.Logging.LdNLog
-  fullName: LaunchDarkly.Logging.LdNLog
-  nameWithType: LdNLog
-- uid: LaunchDarkly.Logging.LdNLog.Adapter
-  name: Adapter
-  href: api/LaunchDarkly.Logging.LdNLog.html#LaunchDarkly_Logging_LdNLog_Adapter
-  commentId: P:LaunchDarkly.Logging.LdNLog.Adapter
-  fullName: LaunchDarkly.Logging.LdNLog.Adapter
-  nameWithType: LdNLog.Adapter
-- uid: LaunchDarkly.Logging.LdNLog.Adapter*
-  name: Adapter
-  href: api/LaunchDarkly.Logging.LdNLog.html#LaunchDarkly_Logging_LdNLog_Adapter_
-  commentId: Overload:LaunchDarkly.Logging.LdNLog.Adapter
-  fullName: LaunchDarkly.Logging.LdNLog.Adapter
-  nameWithType: LdNLog.Adapter

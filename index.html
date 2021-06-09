@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LaunchDarkly Logging Adapters </title>
+    <title>LaunchDarkly Logging API for .NET - Common.Logging Adapter </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="LaunchDarkly Logging Adapters ">
+    <meta name="title" content="LaunchDarkly Logging API for .NET - Common.Logging Adapter ">
     <meta name="generator" content="docfx 2.57.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -60,12 +60,12 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="launchdarkly-logging-adapters">LaunchDarkly Logging Adapters</h1>
+<h1 id="launchdarkly-logging-api-for-net---commonlogging-adapter">LaunchDarkly Logging API for .NET - Common.Logging Adapter</h1>
 
 <p><strong>(version 1.0.1)</strong></p>
-<p>These .NET packages provide integration from the <a href="https://launchdarkly.github.io/dotnet-logging"><code>LaunchDarkly.Logging</code></a> API that is used by the LaunchDarkly <a href="https://github.com/launchdarkly/dotnet-server-sdk">.NET SDK</a>, <a href="https://github.com/launchdarkly/xamarin-client-sdk">Xamarin SDK</a>, and other LaunchDarkly libraries, to the third-party logging frameworks <a href="https://github.com/net-commons/common-logging"><code>Common.Logging</code></a>, <a href="https://logging.apache.org/log4net/"><code>log4net</code></a>, and <a href="https://nlog-project.org/"><code>NLog</code></a>.</p>
-<p>The adapters in this repository are published as separate NuGet packages, to avoid unwanted dependencies on <code>Common.Logging</code>, <code>log4net</code>, or <code>NLog</code> in the LaunchDarkly SDKs and in applications that do not use those frameworks.</p>
-<h2 id="using-commonlogging">Using <strong>Common.Logging</strong></h2>
+<p>This .NET package provides integration from the <a href="https://launchdarkly.github.io/dotnet-logging"><code>LaunchDarkly.Logging</code></a> API that is used by the LaunchDarkly <a href="https://github.com/launchdarkly/dotnet-server-sdk">.NET SDK</a>, <a href="https://github.com/launchdarkly/xamarin-client-sdk">Xamarin SDK</a>, and other LaunchDarkly libraries, to the <a href="https://github.com/net-commons/common-logging"><code>Common.Logging</code></a> framework.</p>
+<p>This adapter is published as a separate NuGet package to avoid unwanted dependencies on <code>Common.Logging</code> in the LaunchDarkly SDKs and in applications that do not use that framework.</p>
+<h2 id="usage">Usage</h2>
 <p>The <strong><a class="xref" href="api/LaunchDarkly.Logging.LdCommonLogging.html">LdCommonLogging</a></strong> adapter is provided by the NuGet package <a href="https://nuget.org/packages/LaunchDarkly.Logging.CommonLogging"><strong><code>LaunchDarkly.Logging.CommonLogging</code></strong></a>. It provides integration with <a href="https://github.com/net-commons/common-logging"><code>Common.Logging</code></a> version 3.4.0 and higher.</p>
 <p>Like <code>LaunchDarkly.Logging</code>, <code>Common.Logging</code> is a facade that can delegate to various adapters, sending the output either to some specific logging framework, or to a simple destination such as the console. Therefore, the LaunchDarkly adapter for <code>Common.Logging</code> is a facade for a facade.</p>
 <p><code>LaunchDarkly.Logging</code> already has adapters of its own for some of the same destinations that <code>Common.Logging</code> can delegate to. For instance, to send log output from LaunchDarkly components to the console, or to a file, or to the .NET Core <code>Microsoft.Extensions.Logging</code> API, you do not need to use <code>Common.Logging</code>; you can simply use the methods in <code>LaunchDarkly.Logging.Logs</code>. This adapter is only useful in two situations:</p>
@@ -88,41 +88,7 @@
         .Build();
     var client = new LdClient(config);
 </code></pre><p><code>LdCommonLogging.Adapter</code> does not have any configuration methods of its own; what happens to the log output is entirely determined by the <code>Common.Logging</code> configuration.</p>
-<h2 id="using-log4net">Using <strong>log4net</strong></h2>
-<p>The <strong><a class="xref" href="api/LaunchDarkly.Logging.LdLog4net.html">LdLog4net</a></strong> adapter is provided by the NuGet package <a href="https://nuget.org/packages/LaunchDarkly.Logging.Log4net"><strong><code>LaunchDarkly.Logging.Log4net</code></strong></a>. It provides integration with <a href="https://logging.apache.org/log4net/"><code>log4net</code></a> version 2.0.6 and higher.</p>
-<p><code>log4net</code> has a rich configuration system that allows log behavior to be controlled in many ways. The LaunchDarkly adapter does not define any specific logging behavior itself, so the actual behavior will be determined by how you have configured <code>log4net</code>.</p>
-<p>To use the adapter:</p>
-<ol>
-<li><p>Add the NuGet package <code>LaunchDarkly.Logging.Log4net</code> to your project. Make sure you also have a dependency on a compatible version of <a href="https://nuget.org/packages/log4net"><code>log4net</code></a>.</p>
-</li>
-<li><p>Use the property <a class="xref" href="api/LaunchDarkly.Logging.LdLog4net.html#LaunchDarkly_Logging_LdLog4net_Adapter"><strong>LdLog4net.Adapter</strong></a> in any LaunchDarkly library configuration that accepts a <code>LaunchDarkly.Logging.ILogAdapter</code> object. For instance, if you are configuring the LaunchDarkly .NET SDK:</p>
-</li>
-</ol>
-<pre><code class="lang-csharp">    using LaunchDarkly.Logging;
-    using LaunchDarkly.Sdk.Server;
-
-    var config = Configuration.Builder(&quot;my-sdk-key&quot;)
-        .Logging(LdLog4net.Adapter)
-        .Build();
-    var client = new LdClient(config);
-</code></pre><h2 id="using-nlog">Using <strong>NLog</strong></h2>
-<p>The <strong><a class="xref" href="api/LaunchDarkly.Logging.LdNLog.html">LdNLog</a></strong> adapter is provided by the NuGet package <a href="https://nuget.org/packages/LaunchDarkly.LoggingNLog"><strong><code>LaunchDarkly.Logging.NLog</code></strong></a>. It provides integration with <a href="https://nlog-project.org/"><code>NLog</code></a> version 4.5 and higher.</p>
-<p><code>NLog</code> has a rich configuration system that allows log behavior to be controlled in many ways. The LaunchDarkly adapter does not define any specific logging behavior itself, so the actual behavior will be determined by how you have configured <code>NLog</code>.</p>
-<p>To use the adapter:</p>
-<ol>
-<li><p>Add the NuGet package <code>LaunchDarkly.Logging.NLog</code> to your project. Make sure you also have a dependency on a compatible version of <a href="https://nuget.org/packages/NLog"><code>NLog</code></a>.</p>
-</li>
-<li><p>Use the property <a class="xref" href="api/LaunchDarkly.Logging.LdNLog.html#LaunchDarkly_Logging_LdNLog_Adapter"><strong>LdNLog.Adapter</strong></a> in any LaunchDarkly library configuration that accepts a <code>LaunchDarkly.Logging.ILogAdapter</code> object. For instance, if you are configuring the LaunchDarkly .NET SDK:</p>
-</li>
-</ol>
-<pre><code class="lang-csharp">    using LaunchDarkly.Logging;
-    using LaunchDarkly.Sdk.Server;
-
-    var config = Configuration.Builder(&quot;my-sdk-key&quot;)
-        .Logging(LdNLog.Adapter)
-        .Build();
-    var client = new LdClient(config);
-</code></pre></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
