@@ -1,33 +1,33 @@
-# LaunchDarkly Logging API for .NET - Third-Party Logging Framework Adapters
+# LaunchDarkly Logging API for .NET - Common.Logging Adapter
 
-[![NuGet (for Common.Logging)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.CommonLogging.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.CommonLogging/)
-[![NuGet (for Log4net)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.Log4net.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.Log4net/)
-[![NuGet (for NLog)](https://img.shields.io/nuget/v/LaunchDarkly.Logging.NLog.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.NLog/)
-[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters.svg?style=shield)](https://circleci.com/gh/launchdarkly/dotnet-logging-adapters)
-[![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=reference&color=00add8)](https://launchdarkly.github.io/dotnet-logging-adapters)
+[![NuGet](https://img.shields.io/nuget/v/LaunchDarkly.Logging.CommonLogging.svg?style=flat-square)](https://www.nuget.org/packages/LaunchDarkly.Logging.CommonLogging/)
+[![CircleCI](https://circleci.com/gh/launchdarkly/dotnet-logging-adapter-commonlogging.svg?style=shield)](https://circleci.com/gh/launchdarkly/dotnet-logging-adapter-commonlogging)
+[![Documentation](https://img.shields.io/static/v1?label=GitHub+Pages&message=reference&color=00add8)](https://launchdarkly.github.io/dotnet-logging-adapter-commonlogging)
 
 ## Overview
 
-These .NET packages provide integration from the [`LaunchDarkly.Logging`](https://github.com/launchdarkly/dotnet-logging) API that is used by the LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the third-party logging frameworks [`Common.Logging`](https://github.com/net-commons/common-logging), [`log4net`](https://logging.apache.org/log4net/), and [`NLog`](https://nlog-project.org/).
+This .NET package provides integration from the [`LaunchDarkly.Logging`](https://launchdarkly.github.io/dotnet-logging) API that is used by the LaunchDarkly [.NET SDK](https://github.com/launchdarkly/dotnet-server-sdk), [Xamarin SDK](https://github.com/launchdarkly/xamarin-client-sdk), and other LaunchDarkly libraries, to the [`Common.Logging`](https://github.com/net-commons/common-logging) framework.
 
-For more information and examples, see the [API documentation](https://launchdarkly.github.io/dotnet-logging-adapters).
+For more information and examples, see the [API documentation](https://launchdarkly.github.io/dotnet-logging-adapter-commonlogging).
 
 ## Supported .NET versions
 
-The adapter packages are built for two target frameworks:
+The package is built for two target frameworks:
 
-* .NET Framework 4.5.2: runs on .NET Framework 4.5.x and above.
-* .NET Standard 2.0: runs on .NET Core 2.0 and above; on other application platforms that are not .NET Framework, such as Xamarin; or within a library that is targeted to .NET Standard 2.x.
+* .NET Standard 2.0: runs in .NET Core 2.1 and above, or in .NET 5.0 and above, or in library code that is targeted to .NET Standard 2.x.
+* .NET Framework 4.5.2: runs in .NET Framework 4.5.2 and above.
 
 The .NET build tools should automatically load the most appropriate build of the library for whatever platform your application or library is targeted to.
 
+New versions of `LaunchDarkly.Logging.CommonLogging` will be released as necessary to support higher versions of `Common.Logging` if they become available.
+
 ## Contributing
 
-See [Contributing](https://github.com/launchdarkly/dotnet-logging-adapters/blob/master/CONTRIBUTING.md).
+See [Contributing](https://github.com/launchdarkly/dotnet-logging-adapter-commonlogging/blob/master/CONTRIBUTING.md).
 
 ## Signing
 
-The published versions of these assemblies are digitally signed with Authenticode and [strong-named](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/strong-named-assemblies). Building the code locally in the default Debug configuration does not use strong-naming and does not require a key file. The public key file is in this repo at `LaunchDarkly.Logging.pk` as well as here:
+The published version of this assembly is digitally signed with Authenticode and [strong-named](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/strong-named-assemblies). Building the code locally in the default Debug configuration does not use strong-naming and does not require a key file. The public key file is in this repo at `LaunchDarkly.Logging.pk` as well as here:
 
 ```
 Public Key:
