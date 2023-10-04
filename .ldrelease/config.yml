@@ -10,8 +10,8 @@ circleci:
 template:
   name: dotnet-windows
   env:
-    LD_RELEASE_TEST_TARGET_FRAMEWORK: net452
-    LD_RELEASE_DOCS_TARGET_FRAMEWORK: net452
+    LD_RELEASE_TEST_TARGET_FRAMEWORK: net462
+    LD_RELEASE_DOCS_TARGET_FRAMEWORK: net462
 
 documentation:
   title: LaunchDarkly Logging API for .NET - Common.Logging Adapter
