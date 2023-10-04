@@ -7,7 +7,7 @@
       SDKs which do not consider "net5.0" to be a valid target framework that can be
       referenced in a project file.
     -->
-    <BuildFrameworks Condition="'$(BUILDFRAMEWORKS)' == ''">netstandard2.0;net452</BuildFrameworks>
+    <BuildFrameworks Condition="'$(BUILDFRAMEWORKS)' == ''">netstandard2.0;net462</BuildFrameworks>
     <TargetFrameworks>$(BUILDFRAMEWORKS)</TargetFrameworks>
 
     <DebugType>portable</DebugType>
