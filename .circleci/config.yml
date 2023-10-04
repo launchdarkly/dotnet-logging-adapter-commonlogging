@@ -9,7 +9,7 @@ workflows:
     jobs:
       - build-test-linux:
           name: .NET 7.0 - Linux
-          docker-image: mcr.microsoft.com/dotnet/sdk:5.0-focal
+          docker-image: mcr.microsoft.com/dotnet/sdk:7.0-bullseye
           build-target-framework: netstandard2.0
           test-target-framework: net7.0
       - build-test-windows:
