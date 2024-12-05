@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "bootstrap-sha": "f7ac5d96324120ff47eb7ac4e5399ce71c6eb02d",
+      "bootstrap-sha": "6c6c0057ea7efe74f259670387308acd2d6ce500",
       "include-v-in-tag": false,
       "include-component-in-tag": false
     }
