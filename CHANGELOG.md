@@ -2,6 +2,18 @@
 
 All notable changes to the project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org).
 
+## [1.1.0](https://github.com/launchdarkly/dotnet-logging-adapter-commonlogging/compare/1.0.1...1.1.0) (2026-06-23)
+
+
+### Features
+
+* Use 2.0.0+ of LaunchDarkly.Logging ([#10](https://github.com/launchdarkly/dotnet-logging-adapter-commonlogging/issues/10)) ([6c6c005](https://github.com/launchdarkly/dotnet-logging-adapter-commonlogging/commit/6c6c0057ea7efe74f259670387308acd2d6ce500))
+
+
+### Bug Fixes
+
+* add release-please version markers to csproj ([#23](https://github.com/launchdarkly/dotnet-logging-adapter-commonlogging/issues/23)) ([bc7f61f](https://github.com/launchdarkly/dotnet-logging-adapter-commonlogging/commit/bc7f61f56b0d1e54a0d5d74250992b6758558710))
+
 ## [1.0.1] - 2021-06-08
 ### Changed:
 - Updated dependencies on `LaunchDarkly.Logging` to version 1.0.1.
